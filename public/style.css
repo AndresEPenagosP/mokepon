@@ -1,0 +1,186 @@
+ @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+body{
+    font-family: 'Shadows Into Light', cursive; /*fuente importada de google*/
+    background-size: 2000px 1000px;
+    background-image: url(./assets/WhatsApp_Image_2023-10-20_at_4.47.45_PM-transformed.jpeg) ;
+    
+
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: white; /*color de la fuente*/
+    font-size: 60px;
+}
+
+.subtitulo{
+    color: white; /*color de la fuente*/
+    font-size: 40px;
+}
+
+.tarjetas , .tarjetas-ataque{ /*usando coma se agrega otra clase .tarjeras-ataque*/
+    display: flex;
+    gap:10px; /*es una opcion para dejar espacio entre tarjetas*/
+}
+
+.tarjeta-de-mokepon{
+    color: white;/*color de fuente*/
+    width: 200px;/*tamaño tarjeta*/
+    height: 100px;/*tamaño tarjeta*/
+    background-color: #005b418f;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;/*orden y dispocicion de objetos dentro de tatjeta*/
+    justify-content: center;/*orden y dispocicion de objetos dentro de tatjeta*/
+    align-items: center;/*orden y dispocicion de objetos dentro de tatjeta*/
+    border: 3px  ridge #64CCC5;
+    font-size: 32px;
+
+    
+}
+
+.tarjeta-de-mokepon img { /*se pone la misma clase tarjeta-de-mokepon y se le agrega img para poder usar la misma clase */
+    width: 80px;
+}
+
+.tarjeta-de-mokepon:hover {
+    cursor: pointer; /*cursor*/
+}
+
+input{
+    display: none;
+}
+
+#boton-mascota{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    background-color: #005b418f;
+    margin: 1px;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: 3px  ridge #64CCC5;
+    color: white;
+    margin-top: 30px;
+    cursor: pointer; /*cursor*/
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+   background-color: #232D3F;
+}
+
+#seleccionar-ataque{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   color:white;
+   font-size: 28px;
+}
+
+.boton-de-ataque{
+    background-color: #005b418f;
+    font-family: 'Shadows Into Light', cursive; 
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px  ridge #64CCC5;
+    cursor: pointer;
+    width: 80px;
+    font-size: 40px;
+
+}
+
+#mensajes{
+    width: 400px;
+    background: #ffffff7a;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    color: black;
+    border: 3px ridge #ffffff7a;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#reiniciar{
+    border-radius: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #005b418f;
+    size: 10px;
+    width: 80px;
+    height: 80;
+    height: 64px;
+    cursor: pointer; 
+
+}
+
+.ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    
+}
+
+#vidas-jugador, #vidas-enemigo {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo{ /*hijos de .ataques heredan display grid y tambien ellos llevan flex*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ver-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+#ver-mapa button{ font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    background-color: #005b418f;
+    margin: 1px;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: 3px  ridge #64CCC5;
+    color: white;
+    margin-top: 30px;
+    cursor: pointer; /*cursor*/
+}
+
+@media (max-width: 560px){ /*hace que se ajuste a pantallas de celular, aqui se ponen todos los estilos que apareceran solo en celular*/
+    .tarjetas, .tarjetas-ataque{        /*<------ podemos agregar varias clases*/
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 560px){ /*hace que se ajuste a pantallas de celular, aqui se ponen todos los estilos que apareceran solo en celular*/
+  #ver-mapa div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+}
+
+
+
+
+
